@@ -34,7 +34,8 @@ Summary:        CORS net/http middleware for Go
 
 License:        MIT
 URL:            %{gourl}
-%define stag %{?tag}%{?!tag:%commit}
+%define scommit %{?commit}%{?!commit:%version}
+%define stag %{?tag}%{?!tag:%scommit}
 Source: https://%{goipath}/archive/%{stag}/%{goihead}-%{stag}.tar.gz
 
 %description %{common_description}
